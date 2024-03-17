@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/Header";
+import Cards from "./components/Cards";
+import TodoCon from "./components/TodoContainer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-black p-16">
+      <div className="bg-white p-8 border rounded-md">
+
+        <Header></Header>
+        <div className="flex justify-between  gap-7 my-5 flex-wrap">
+          <Cards bgcolor={"#695AAF"} title={"23"} subtitle={"Chennai"}></Cards>
+          <Cards bgcolor={"#CA524F"} title={"20 December"} subtitle={"12:00:33"}></Cards>
+          <Cards bgcolor={"#CA8202"} title={"Built Using"} subtitle={"React"}  ></Cards>
+        </div>
+        <TodoCon></TodoCon>
+
+
+      </div>
     </div>
   );
 }
